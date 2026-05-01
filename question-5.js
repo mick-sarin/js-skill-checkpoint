@@ -1,8 +1,22 @@
 // Question 5: Calculating Total Price in User's Cart
 
-function calculateTotalPrice() {
+function calculateTotalPrice(cart) {
   // เริ่มเขียนโค้ดตรงนี้
+  // ใช้ for of loop เพื่อวนผ่าน obj ทุกตัวใน arr
+  // เริ่มต้นราคารวมเป็น0
+  let totalPrice = 0;
+  for (let item of cart) {
+    // คำนวณราคาของสินค้า (ราคา*จำนวน)
+    const sum = item.price * item.quantity;
+    
+    // ราคารวมสะสมบวกตามรอบ loop จนครบ
+   totalPrice += sum;
+ 
+  }
+ return totalPrice;
 }
+
+
 
 // ตัวอย่างการใช้งาน
 
